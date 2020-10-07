@@ -15,18 +15,16 @@
       <div id="viz">
       </div>
       <script>
-          vlSpec = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-            "data": {
-                "url": "../building_data.json"
-            },
-            "mark": "circle",
-            "encoding": {
-                "x": { "field": "First Year Acquired", "type": "quantitative"},
-                "y": { "field": "Total Square Footage", "type": "quantitative"},
-                "size": { "field": "Count", "type": "quantitative"}
-            }
-        };
+          vlSpec =
+            {
+                "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                "data": {"url": "../building_data.json"},
+                "mark": "circle",
+                "encoding": {
+                    "x": {"field": "Congress Dist", "type": "quantitative"},
+                    "y": {"field": "Square Footage", "type": "quantitative"}
+                }
+            };
           vegaEmbed('#viz', vlSpec);
       </script>
   </body>
